@@ -1,6 +1,6 @@
 ---
-title: revision-static-edition
-description: revision-static-edition
+title: Revision 固定版本信息
+description: 配置 Revision 固定版本信息
 privilege: TrustedInstaller
 actions:
 

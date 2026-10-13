@@ -1,6 +1,6 @@
 ---
-title: configure-oobe
-description: configure-oobe
+title: 配置首次开机体验（OOBE）
+description: 配置首次开机体验（OOBE）
 privilege: TrustedInstaller
 actions:
 

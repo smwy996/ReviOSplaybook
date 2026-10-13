@@ -1,6 +1,6 @@
 ---
-title: Configure System -> Logon
-description: Configure logon settings
+title: 配置系统 → 登录
+description: 配置登录设置
 privilege: TrustedInstaller
 actions:
   

@@ -1,10 +1,10 @@
 ---
-title: Initialization
-description: Copies Revision folders/files, and configures some initial settings
+title: 初始化
+description: 复制 Revision 文件夹和文件，并完成初始设置
 privilege: TrustedInstaller
 actions:
   
-  - !writeStatus: {status: "Initializing"}
+  - !writeStatus: {status: "正在初始化"}
 
   # Prevent annoying notifications during deployment
   - !registryValue:
@@ -28,7 +28,7 @@ actions:
   - !cmd:
     command: 'ipconfig /flushdns'
 
-  - !writeStatus: {status: "Installing VCRedist"}
+  - !writeStatus: {status: "正在安装 Visual C++ 运行库"}
   - !download: 
     url: 'https://aka.ms/vs/17/release/vc_redist.x64.exe'
     destination: "vc_redist.x64.exe"
@@ -38,7 +38,7 @@ actions:
     exe: "vc_redist.x64.exe"
     args: '/quiet /norestart'
 
-  - !writeStatus: {status: 'Installing Revision Tool'}
+  - !writeStatus: {status: '正在安装 Revision 工具'}
   - !download: 
     url: 'https://github.com/meetrevision/revision-tool/releases/latest/download/RevisionTool-Setup.exe'
     destination: "RevisionTool-Setup-Latest.exe"
@@ -59,14 +59,14 @@ actions:
       };
       Start-Process -FilePath $installer -ArgumentList '/VERYSILENT /TASKS="desktopicon"' -Wait -WindowStyle Hidden
 
-  - !writeStatus: {status: "Optimizing PowerShell"}
+  - !writeStatus: {status: "正在优化 PowerShell"}
   - !run:
     exeDir: true
     exe: "PowerShell"
     args: '-NoP -ExecutionPolicy Bypass -File ngen.ps1'
     weight: 100
 
-  - !writeStatus: {status: "Configuring a power plan"}
+  - !writeStatus: {status: "正在配置电源计划"}
   - !run:
     path: "%ProgramFiles%\\Revision Tool"
     exe: "revitool.exe"

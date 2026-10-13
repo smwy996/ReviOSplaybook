@@ -1,6 +1,6 @@
 ---
-title: Make MSI installer work in safe mode
-description: make-msi-installer-work-in-safe-mode
+title: 允许 MSI 安装程序在安全模式下运行
+description: 使 MSI 安装程序可在安全模式下运行
 privilege: TrustedInstaller
 actions:
 

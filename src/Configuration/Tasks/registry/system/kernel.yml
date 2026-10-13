@@ -1,6 +1,6 @@
 ---
-title: configure-kernel
-description: configure-kernel
+title: 配置内核
+description: 配置内核设置
 privilege: TrustedInstaller
 actions:
 

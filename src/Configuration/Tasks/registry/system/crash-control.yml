@@ -1,6 +1,6 @@
 ---
-title: Configure Crash Control
-description: Configure general settings for crash control
+title: 配置故障控制
+description: 配置故障控制的常规设置
 privilege: TrustedInstaller
 actions:
 

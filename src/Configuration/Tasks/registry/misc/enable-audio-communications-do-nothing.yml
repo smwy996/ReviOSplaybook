@@ -1,6 +1,6 @@
 ---
-title: enable-audio-communications-do-nothing
-description: enable-audio-communications-do-nothing
+title: 通信活动期间不执行任何操作
+description: 检测到通信活动时不降低其他声音的音量
 privilege: TrustedInstaller
 actions:
 

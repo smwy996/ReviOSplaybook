@@ -1,6 +1,6 @@
 ---
-title: disable-automatic-maintenance
-description: disable-automatic-maintenance
+title: 禁用自动维护
+description: 禁用自动维护
 privilege: TrustedInstaller
 option: disable-automatic-maintenance
 actions:

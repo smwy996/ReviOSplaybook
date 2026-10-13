@@ -1,6 +1,6 @@
 ---
-title: configure-power-control
-description: configure-power-control
+title: 配置电源控制
+description: 配置电源控制设置
 privilege: TrustedInstaller
 actions:
 

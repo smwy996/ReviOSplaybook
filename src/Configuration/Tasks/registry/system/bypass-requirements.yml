@@ -1,6 +1,6 @@
 ---
-title: Bypass requirements
-description: Bypass requirements for Windows 11 installation, most of them are only for boot.wim
+title: 绕过系统要求
+description: 绕过 Windows 11 安装要求，其中大部分设置仅适用于 boot.wim
 privilege: TrustedInstaller
 actions:
 

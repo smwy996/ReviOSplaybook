@@ -1,10 +1,10 @@
 ---
-title: Services
-description: Removal and configuration of services
+title: 服务
+description: 删除和配置系统服务
 privilege: TrustedInstaller
 actions:
   
-  - !writeStatus: {status: "Configuring services"}
+  - !writeStatus: {status: "正在配置系统服务"}
 
   # === Beep - Disabled
   # - !service: {name: 'Beep', operation: change, startup: 4}
@@ -68,4 +68,4 @@ actions:
 
   # == condrv - Automatic
   # -----> #184 This is not ReviOS related, but setting to Automatic fixes error 3489660986 (0xd000003a)
-  - !service: {name: 'condrv', operation: change, startup: 2} 
+  - !service: {name: 'condrv', operation: change, startup: 2}

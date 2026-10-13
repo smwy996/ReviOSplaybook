@@ -1,6 +1,6 @@
 ---
-title: Configure System -> Win32PrioritySeparation
-description: Configure Win32PrioritySeparation
+title: 配置系统 → Win32PrioritySeparation
+description: 配置 Win32PrioritySeparation
 privilege: TrustedInstaller
 actions:
 

@@ -1,6 +1,6 @@
 ---
-title: OEM Information
-description: Configure OEM Information
+title: OEM 信息
+description: 配置 OEM 信息
 privilege: TrustedInstaller
 actions:
 

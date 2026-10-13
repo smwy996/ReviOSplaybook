@@ -1,6 +1,6 @@
 ---
-title: Configure Explorer -> Context Menu
-description: Configure the context menu in Windows Explorer
+title: 配置文件资源管理器 → 右键菜单
+description: 配置 Windows 文件资源管理器的右键菜单
 privilege: TrustedInstaller
 actions:
 

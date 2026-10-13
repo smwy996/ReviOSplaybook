@@ -1,10 +1,10 @@
 ---
-title: APPX
-description: Removal of APPX packages
+title: APPX 应用包
+description: 移除 APPX 应用包
 privilege: TrustedInstaller
 actions:
   
-  - !writeStatus: {status: "Removing Appx Packages"}
+  - !writeStatus: {status: "正在移除 APPX 应用包"}
   - !powerShell:
     wait: true
     exeDir: true
@@ -60,7 +60,7 @@ actions:
         
         & (Join-Path $env:ProgramFiles 'Revision Tool\revitool.exe') appx --all-users --remove ($packages -join ',')
 
-  - !writeStatus: {status: "Removing Photos"}
+  - !writeStatus: {status: "正在移除 Microsoft 照片"}
   - !powerShell:
     option: "remove-appx-photos"
     wait: true
@@ -70,7 +70,7 @@ actions:
     command: >-
       & (Join-Path $env:ProgramFiles 'Revision Tool\revitool.exe') appx --all-users --remove 'Microsoft.Windows.Photos'
 
-  - !writeStatus: {status: "Removing Dev Home", option: "remove-appx-devhome"}
+  - !writeStatus: {status: "正在移除开发人员主页", option: "remove-appx-devhome"}
   - !powerShell:
     option: "remove-appx-devhome"
     wait: true
@@ -80,7 +80,7 @@ actions:
     command: >-
       & (Join-Path $env:ProgramFiles 'Revision Tool\revitool.exe') appx --all-users --remove 'Microsoft.Windows.DevHome'
 
-  - !writeStatus: {status: "Removing Your Phone", option: "remove-appx-yourphone"}
+  - !writeStatus: {status: "正在移除手机连接", option: "remove-appx-yourphone"}
   - !powerShell:
     option: "remove-appx-yourphone"
     wait: true
@@ -96,7 +96,7 @@ actions:
 
   # https://github.com/meetrevision/playbook/issues/219
   # When the network is available, revitool installs the latest VCLibs packages; otherwise, it bundles and installs the recent version of VCLibs packages offline (useful during oobe).
-  - !writeStatus: {status: "Restoring VCLibs"}
+  - !writeStatus: {status: "正在还原 Visual C++ 运行库"}
   - !run:
     path: "%ProgramFiles%\\Revision Tool"
     exe: "revitool.exe"

@@ -1,6 +1,6 @@
 ---
-title: disable-system-restore-pre-defined-config
-description: disable-system-restore-pre-defined-config
+title: 禁用系统还原预定义配置
+description: 禁用系统还原的预定义配置
 privilege: TrustedInstaller
 actions:
 

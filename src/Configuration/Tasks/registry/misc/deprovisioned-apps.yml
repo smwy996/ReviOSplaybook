@@ -1,6 +1,6 @@
 ---
-title: Configure Deprovisioned Apps
-description: Prevents some UWP packages from installing after updating Windows
+title: 配置已取消预配的应用
+description: 防止部分 UWP 应用包在 Windows 更新后重新安装
 privilege: TrustedInstaller
 actions:
 

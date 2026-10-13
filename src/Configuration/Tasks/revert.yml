@@ -1,11 +1,11 @@
 ---
-title: Rollback Tweaks
-description: Rollback tweaks for those who are applying from previous versions of the playbook
+title: 回滚调整
+description: 为从旧版配置方案升级的用户回滚过时调整
 privilege: TrustedInstaller
 onUpgrade: true
 actions:
 
-  - !writeStatus: {status: "Removing Outdated Changes"}
+  - !writeStatus: {status: "正在移除过时调整"}
 
   - !registryValue: { path: 'HKLM\SYSTEM\ControlSet001\Control\Session Manager', value: 'HeapDeCommitFreeBlockThreshold', type: REG_DWORD, data: '0' }
 

@@ -1,9 +1,9 @@
 ---
-title: Optional Features
-description: Configures Windows optional features
+title: 可选功能
+description: 配置 Windows 可选功能
 privilege: TrustedInstaller
 actions:
-  - !writeStatus: {status: "Configuring features"}
+  - !writeStatus: {status: "正在配置可选功能"}
   - !powerShell:
     exeDir: true
     errorAction: Ignore

@@ -1,6 +1,6 @@
 ---
-title: Configure Security -> Virtualization Based Security
-description: Configure VBS
+title: 配置安全性 → 基于虚拟化的安全性
+description: 配置基于虚拟化的安全性（VBS）
 privilege: TrustedInstaller
 actions:
 

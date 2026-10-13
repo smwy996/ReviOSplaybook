@@ -1,11 +1,11 @@
 ---
-title: Software
-description: Installs preferred software 
+title: 软件
+description: 安装首选软件
 privilege: TrustedInstaller
 actions:
 
   # https://github.com/meetrevision/playbook/issues/81
-  # - !status: {status: 'Updating Winget'}
+  # - !status: {status: '正在更新 WinGet'}
   # - !powerShell:
   #   weight: 50
   #   runas: currentUserElevated
@@ -13,7 +13,7 @@ actions:
   #   exeDir: true
   #   command: '.\UPDATE-APPX.ps1'
 
-  - !status: {status: 'Installing Brave', option: "browser-brave"}
+  - !status: {status: '正在安装 Brave', option: "browser-brave"}
   - !download: 
     option: "browser-brave"
     url: 'https://github.com/brave/brave-browser/releases/latest/download/BraveBrowserStandaloneSetup.exe'
@@ -42,7 +42,7 @@ actions:
     weight: 150
     option: "browser-brave"
 
-  - !status: {status: 'Configuring Brave', option: "browser-brave"}
+  - !status: {status: '正在配置 Brave', option: "browser-brave"}
   - !cmd:
     exeDir: true
     command: 'robocopy "BraveSoftware" "%ProgramFiles%\BraveSoftware" /E /IM /IT /NP & robocopy "BraveSoftware" "%localappdata%\BraveSoftware" /E /IM /IT /NP'
@@ -51,7 +51,7 @@ actions:
     option: "browser-brave"
 
   # Firefox
-  - !status: {status: 'Installing Firefox', option: "browser-firefox"}
+  - !status: {status: '正在安装 Firefox', option: "browser-firefox"}
   - !software:
     name: "Firefox"
     source: chocolatey
