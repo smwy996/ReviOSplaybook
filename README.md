@@ -16,13 +16,6 @@ ReviOS Playbook 修改自用版
 > [!NOTE]
 > 已测试环境仅限虚拟机（VM）：Microsoft Windows 11 专业版 25H2，操作系统版本 `26200.6584`，测试通过。其他 Windows 版本、系统版本号及实体机环境尚未验证。
 
-<div align="center">
-
-[![Releases](https://img.shields.io/github/v/release/smwy996/ReviOSplaybook.svg?label=Release)](https://github.com/smwy996/ReviOSplaybook/releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/smwy996/ReviOSplaybook/total?label=Total%20downloads)](https://github.com/smwy996/ReviOSplaybook/releases)
-
-</div>
-
 ReviOS 是一个精简化的 Windows 定制版本，注重轻量、稳定，并改善性能、隐私与兼容性。本仓库是其配置方案（playbook）的个人修改版，配合 [AME Wizard](https://amelabs.net) 使用。
 
 ### 当前计划
@@ -115,7 +108,5 @@ ReviOS 是一个精简化的 Windows 定制版本，注重轻量、稳定，并�
 不会。配置方案不包含下载操作，也已移除强制联网要求。但 AME Wizard 自身、以及 Windows 的后续联网行为不受本仓库控制。
 
 ## 📝 License
-
-[![License](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 ReviOS Playbook 采用 [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) 许可协议。
