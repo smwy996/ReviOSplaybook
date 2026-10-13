@@ -5,10 +5,6 @@ privilege: TrustedInstaller
 actions: 
   - !writeStatus: {status: "正在调整注册表"}
 
-  # OS Info
-  - !writeStatus: {status: "正在配置系统信息"}
-  - !task: {path: 'Tasks\registry\os-info\edition.yml'}
-  - !task: {path: 'Tasks\registry\os-info\oem-info.yml'}
 
   # Explorer
   - !writeStatus: {status: "正在配置文件资源管理器"}

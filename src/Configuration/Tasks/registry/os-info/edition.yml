@@ -4,9 +4,11 @@ description: 配置 Revision 固定版本信息
 privilege: TrustedInstaller
 actions:
 
-  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion', value: 'EditionSubManufacturer', type: REG_SZ, data: 'MeetRevision'}
-  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion', value: 'EditionSubstring', type: REG_SZ, data: 'Revision'}
-  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion', value: 'EditionSubVersion', type: REG_SZ, data: 'ReviOS'}
+  # [自用版已禁用] 原剧本在此处把系统版本字段（EditionSubManufacturer/EditionSubstring/EditionSubVersion）写成 MeetRevision/Revision/ReviOS
+  # 自用版保留系统原始标识，不写入任何第三方品牌信息
+  # - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion', value: 'EditionSubManufacturer', type: REG_SZ, data: 'MeetRevision'}
+  # - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion', value: 'EditionSubstring', type: REG_SZ, data: 'Revision'}
+  # - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion', value: 'EditionSubVersion', type: REG_SZ, data: 'ReviOS'}
 
 
   # === Causes Network Sharing/Computer Name issues
