@@ -28,34 +28,30 @@ actions:
   - !cmd:
     command: 'ipconfig /flushdns'
 
-  - !writeStatus: {status: "正在安装 Visual C++ 运行库"}
-  - !download: 
-    url: 'https://aka.ms/vs/17/release/vc_redist.x64.exe'
-    destination: "vc_redist.x64.exe"
-    overwrite: true
-  - !run:
-    exeDir: true
-    exe: "vc_redist.x64.exe"
-    args: '/quiet /norestart'
+  # [离线] VCRedist 依赖在线下载，自用版不联网获取。
+  # 需要时请提前下载安装包，在配置方案之外手动安装。
+  # - !writeStatus: {status: "正在安装 Visual C++ 运行库"}
+  # - !download: 
+  #   url: 'https://aka.ms/vs/17/release/vc_redist.x64.exe'
+  #   destination: "vc_redist.x64.exe"
+  #   overwrite: true
+  # - !run:
+  #   exeDir: true
+  #   exe: "vc_redist.x64.exe"
+  #   args: '/quiet /norestart'
 
+  # [离线] 不再在线下载 Revision Tool，改为使用随剧本提供的安装包。
+  # 请把 RevisionTool-Setup.exe 放在剧本同目录（获取方式见 README）。
   - !writeStatus: {status: '正在安装 Revision 工具'}
-  - !download: 
-    url: 'https://github.com/meetrevision/revision-tool/releases/latest/download/RevisionTool-Setup.exe'
-    destination: "RevisionTool-Setup-Latest.exe"
-    overwrite: true
-    errorAction: Log
   - !powerShell:
     exeDir: true
     wait: true
     errorAction: Halt
     weight: 50
     command: >-
-      $installer = if (Test-Path -LiteralPath '.\RevisionTool-Setup-Latest.exe') {
-        '.\RevisionTool-Setup-Latest.exe'
-      } elseif (Test-Path -LiteralPath '.\RevisionTool-Setup.exe') {
-        '.\RevisionTool-Setup.exe'
-      } else {
-        throw 'No Revision Tool installer was found.'
+      $installer = '.\RevisionTool-Setup.exe';
+      if (-not (Test-Path -LiteralPath $installer)) {
+        throw 'No Revision Tool installer was found. Please place RevisionTool-Setup.exe next to the playbook.'
       };
       Start-Process -FilePath $installer -ArgumentList '/VERYSILENT /TASKS="desktopicon"' -Wait -WindowStyle Hidden
 

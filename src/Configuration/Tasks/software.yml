@@ -13,48 +13,51 @@ actions:
   #   exeDir: true
   #   command: '.\UPDATE-APPX.ps1'
 
-  - !status: {status: '正在安装 Brave', option: "browser-brave"}
-  - !download: 
-    option: "browser-brave"
-    url: 'https://github.com/brave/brave-browser/releases/latest/download/BraveBrowserStandaloneSetup.exe'
-    destination: "BraveBrowserStandaloneSetup.exe"
-    cpuArch: X64
-    package: 'brave'
-  - !run:
-    exeDir: true
-    exe: "BraveBrowserStandaloneSetup.exe"
-    args: "/silent /install"
-    cpuArch: X64
-    weight: 150
-    option: "browser-brave"
-
-  - !download: 
-    option: "browser-brave"
-    url: 'https://github.com/brave/brave-browser/releases/latest/download/BraveBrowserStandaloneSetupArm64.exe'
-    destination: "BraveBrowserStandaloneSetupArm64.exe"
-    cpuArch: Arm64
-    package: 'brave'
-  - !run:
-    exeDir: true
-    exe: "BraveBrowserStandaloneSetupArm64.exe"
-    args: "/silent /install"
-    cpuArch: Arm64
-    weight: 150
-    option: "browser-brave"
-
-  - !status: {status: '正在配置 Brave', option: "browser-brave"}
-  - !cmd:
-    exeDir: true
-    command: 'robocopy "BraveSoftware" "%ProgramFiles%\BraveSoftware" /E /IM /IT /NP & robocopy "BraveSoftware" "%localappdata%\BraveSoftware" /E /IM /IT /NP'
-    ignoreErrors: true
-    weight: 20
-    option: "browser-brave"
+  # [离线] 浏览器安装包依赖在线下载，自用版不联网获取。
+  # 需要浏览器请提前下载安装包，在配置方案之外手动安装。
+  # - !status: {status: '正在安装 Brave', option: "browser-brave"}
+  # - !download: 
+  #   option: "browser-brave"
+  #   url: 'https://github.com/brave/brave-browser/releases/latest/download/BraveBrowserStandaloneSetup.exe'
+  #   destination: "BraveBrowserStandaloneSetup.exe"
+  #   cpuArch: X64
+  #   package: 'brave'
+  # - !run:
+  #   exeDir: true
+  #   exe: "BraveBrowserStandaloneSetup.exe"
+  #   args: "/silent /install"
+  #   cpuArch: X64
+  #   weight: 150
+  #   option: "browser-brave"
+  #
+  # - !download: 
+  #   option: "browser-brave"
+  #   url: 'https://github.com/brave/brave-browser/releases/latest/download/BraveBrowserStandaloneSetupArm64.exe'
+  #   destination: "BraveBrowserStandaloneSetupArm64.exe"
+  #   cpuArch: Arm64
+  #   package: 'brave'
+  # - !run:
+  #   exeDir: true
+  #   exe: "BraveBrowserStandaloneSetupArm64.exe"
+  #   args: "/silent /install"
+  #   cpuArch: Arm64
+  #   weight: 150
+  #   option: "browser-brave"
+  #
+  # - !status: {status: '正在配置 Brave', option: "browser-brave"}
+  # - !cmd:
+  #   exeDir: true
+  #   command: 'robocopy "BraveSoftware" "%ProgramFiles%\BraveSoftware" /E /IM /IT /NP & robocopy "BraveSoftware" "%localappdata%\BraveSoftware" /E /IM /IT /NP'
+  #   ignoreErrors: true
+  #   weight: 20
+  #   option: "browser-brave"
 
   # Firefox
-  - !status: {status: '正在安装 Firefox', option: "browser-firefox"}
-  - !software:
-    name: "Firefox"
-    source: chocolatey
-    option: "browser-firefox"
-    package: 'firefox'
-    weight: 150
+  # [离线] Firefox 通过在线包管理器 chocolatey 安装，自用版不联网获取。
+  # - !status: {status: '正在安装 Firefox', option: "browser-firefox"}
+  # - !software:
+  #   name: "Firefox"
+  #   source: chocolatey
+  #   option: "browser-firefox"
+  #   package: 'firefox'
+  #   weight: 150
